@@ -145,7 +145,7 @@ export default function Home() {
           </div>
 
           {/* Trajetória */}
-          <div className="md:col-span-6 bg-white border border-neutral-100 rounded-[40px] md:rounded-[56px] p-10 md:px-16 md:py-16 flex flex-col justify-between min-h-[300px] md:min-h-[420px] shadow-sm hover:shadow-md transition-shadow duration-500">
+          <div className="md:col-span-6 bg-gray-100  rounded-[40px] md:rounded-[56px] p-10 md:px-16 md:py-16 flex flex-col justify-between min-h-[300px] md:min-h-[420px] shadow-sm hover:shadow-md transition-shadow duration-500">
             <h3 className="text-[100px] md:text-[160px] font-light leading-none mb-6 text-neutral-900 tracking-tighter italic">4</h3>
             <p className="text-lg md:text-xl text-neutral-700 leading-relaxed w-full md:max-w-[90%] font-medium opacity-80">
               Trajetória técnica de 4 anos, unindo a base profissional da ETEC à especialização em Análise e Desenvolvimento de Sistemas pela FATEC. Focado na criação de soluções práticas e arquitetura de software.
@@ -153,7 +153,7 @@ export default function Home() {
           </div>
 
           {/* Stack / Skills */}
-          <div className="md:col-span-7 bg-neutral-50/80 border border-neutral-100 rounded-[40px] md:rounded-[56px] overflow-hidden min-h-[480px] md:min-h-[560px] flex flex-col relative group">
+          <div className="md:col-span-7 bg-gray-100 rounded-[40px] md:rounded-[56px] overflow-hidden min-h-[480px] md:min-h-[560px] flex flex-col relative group">
             <div className="absolute inset-0 z-0 ">
               <Skills />
             </div>

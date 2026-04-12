@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState, useRef } from 'react'
+import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/src/infrastructure/utils/utils'
 import { Menu, X, ArrowRight } from 'lucide-react'
@@ -10,6 +11,7 @@ import {
   RippleButtonRipples,
 } from '../animations/animate-ui/primitives/buttons/ripple'
 import { AnimatedBackground } from '../animations/motion-primitives/animated-background'
+import Foto from '@/src/app/favicon.png'
 
 const TABS = [
   { label: 'Home', href: '#home' },
@@ -142,10 +144,10 @@ const Header = () => {
               onClick={(e) => scrollToSection(e, '#home')}
               className="flex items-center gap-3 cursor-pointer group"
             >
-              <div className="relative">
-                <img src="/favicon.png" alt="Logo" className="h-8 w-8 transition-transform group-hover:rotate-12" />
+                <div className="relative">
+                <Image src={Foto} alt="Victor Hugo portfolio logo with blue accent glow effect" width={32} height={32} className="h-8 w-8 transition-transform group-hover:rotate-12" />
                 <div className="absolute inset-0 bg-blue-400/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
+                </div>
               <span className="text-lg font-bold tracking-tight text-neutral-900">
                 Victor Hugo
               </span>
