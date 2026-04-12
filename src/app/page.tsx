@@ -141,7 +141,7 @@ export default function Home() {
 
           {/* Stack / Skills */}
           <div className="md:col-span-7 bg-neutral-50/80 border border-neutral-100 rounded-[40px] md:rounded-[56px] overflow-hidden min-h-[480px] md:min-h-[560px] flex flex-col relative group">
-            <div className="absolute inset-0 z-0 opacity-40 group-hover:opacity-100 transition-opacity duration-700">
+            <div className="absolute inset-0 z-0 ">
               <Skills />
             </div>
             <div className="relative z-10 p-10 md:p-16 pointer-events-none">
