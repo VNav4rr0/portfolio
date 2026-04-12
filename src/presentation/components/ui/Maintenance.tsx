@@ -41,7 +41,7 @@ export default function Maintenance() {
             Site em <span className="text-[var(--md-sys-color-primary)]">atualização</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-md mx-auto leading-relaxed">
-            Estamos preparando algo incrível. Voltaremos em breve com novidades no meu portfolio.
+            Estou preparando algo incrível. Voltarei em breve com novidades no meu portfolio.
           </p>
         </motion.div>
 
