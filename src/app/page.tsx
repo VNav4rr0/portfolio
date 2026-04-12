@@ -72,7 +72,7 @@ export default function Home() {
               variants={revealVariants}
               className="text-blue-600 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-4 md:mb-6"
             >
-              Desenvolvedor Full-Stack
+              Desenvolvedor Web & Mobile
             </motion.span>
             <h1 className="w-full text-left text-[clamp(2.8rem,12vw,4.5rem)] sm:text-7xl md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-medium tracking-tight md:tracking-tighter leading-[1] md:leading-[0.9] text-neutral-900">
               Transformando <br />

@@ -17,9 +17,9 @@ export function AboutCarousel() {
       dotColor: "bg-white"
     },
     {
-      label: "Estrutura",
-      title: "Foco total em\nBack-end",
-      description: "Especialista em lógica estrutural, segurança e bancos de dados. Construo APIs robustas, escaláveis e eficientes.",
+      label: "Back-end",
+      title: "Conhecimentos em\nBack-end",
+      description: "Desenvolvedor Back-end Júnior | Java (Spring Boot) & MongoDB. Focado em transformar requisitos em APIs funcionais, com atenção especial à organização do banco de dados e lógica de programação.",
       color: "bg-[#34A853]", // Green Principal
       textColor: "text-white",
       dotColor: "bg-white"
@@ -27,7 +27,7 @@ export function AboutCarousel() {
     {
       label: "Infra",
       title: "Vivência técnica\nem Hardware",
-      description: "Entender o software exige conhecer o hardware. Tenho experiência com infraestrutura e componentes para uma visão 360º.",
+      description: "tuo na organização de componentes e na definição da arquitetura de sistemas conectados, garantindo estabilidade na comunicação e eficiência energética.",
       color: "bg-[#FBBC04]", // Yellow Principal
       textColor: "text-black",
       dotColor: "bg-black"
