@@ -143,11 +143,11 @@ const Header = () => {
               className="flex items-center gap-3 cursor-pointer group"
             >
               <div className="relative">
-                <img src="/favicon.ico" alt="Logo" className="h-8 w-8 transition-transform group-hover:rotate-12" />
+                <img src="/favicon.png" alt="Logo" className="h-8 w-8 transition-transform group-hover:rotate-12" />
                 <div className="absolute inset-0 bg-blue-400/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <span className="text-lg font-bold tracking-tight text-neutral-900">
-                Victor.
+                Victor Hugo
               </span>
             </motion.a>
 
