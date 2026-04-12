@@ -50,93 +50,66 @@ const Footer: React.FC = () => {
     }
 
     return (
-        <div className="w-full bg-[#0a0a0a] text-white rounded-t-[40px] md:rounded-t-[80px] mt-[-40px] pt-24 md:pt-32 relative z-20 overflow-hidden shadow-[0_-20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-between min-h-[70vh]">
-            
+        <footer id="contato" className="bg-neutral-900 text-white px-6 md:px-14 py-24 md:py-40 w-full relative overflow-hidden">
+            {/* Elemento Decorativo de Fundo */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
+
             <motion.div 
                 ref={ref}
-                variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
-                className="w-full max-w-screen-2xl mx-auto flex flex-col h-full justify-between"
+                variants={containerVariants}
+                className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 relative z-10"
             >
-                
-                {/* Top Section */}
-                <div className="px-8 md:px-14 flex flex-col md:flex-row justify-between items-start w-full">
-                    
-                    {/* Left: Heading & Button */}
-                    <motion.div variants={itemVariants} className="flex flex-col gap-10 md:w-1/2">
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.05]">
-                            Vamos criar <br />
-                            algo incrível!
+                <div className="md:col-span-12 w-full h-[1px] bg-neutral-800 mb-12 md:mb-20" />
+          
+                <motion.div variants={itemVariants} className="md:col-span-7 flex flex-col justify-between">
+                    <div>
+                        <h2 className="text-5xl md:text-8xl font-medium tracking-tighter leading-[0.9] mb-12">
+                            Vamos criar <br /> algo incrível?
                         </h2>
-                        <a 
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=victor.h.navarro4@gmail.com"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="w-fit flex items-center gap-3 px-8 py-3 rounded-[32px] border border-zinc-700 hover:border-zinc-300 hover:bg-white hover:text-black transition-all duration-300 text-sm md:text-base font-medium group"
-                        >
-                            Contato 
-                            <ArrowRight className="w-4 h-4 group-hover:-rotate-45 transition-transform duration-300" />
-                        </a>
-                    </motion.div>
-                    
-                    {/* Right: Links Grids */}
-                    <motion.div variants={itemVariants} className="flex flex-row gap-16 sm:gap-24 md:gap-32 mt-20 md:mt-0 md:w-1/2 md:justify-end">
-                        
-                        {/* Socials Column */}
-                        <div className="flex flex-col gap-6">
-                            <h4 className="text-lg md:text-xl text-white mb-2">Sociais</h4>
-                            <div className="flex flex-col gap-4">
-                                <a href="https://github.com/VNav4rr0" target="_blank" rel="noreferrer" className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors">
-                                    Github
-                                </a>
-                                <a href="https://www.linkedin.com/in/victorhugonavarrotaveira/" target="_blank" rel="noreferrer" className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors">
-                                    LinkedIn
-                                </a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=victor.h.navarro4@gmail.com" target="_blank" rel="noreferrer" className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors">
-                                    Email
-                                </a>
-                            </div>
-                        </div>
-
-                        {/* Sitemap Column */}
-                        <div className="flex flex-col gap-6">
-                            <h4 className="text-lg md:text-xl text-white mb-2">Mapa</h4>
-                            <div className="flex flex-col gap-4">
-                                <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors">
-                                    Home
-                                </a>
-                                <a href="#projetos" onClick={(e) => scrollToSection(e, '#projetos')} className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors">
-                                    Projetos
-                                </a>
-                                <a href="#about" onClick={(e) => scrollToSection(e, '#about')} className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors">
-                                    Sobre
-                                </a>
-                                <button onClick={(e) => scrollToSection(e, '#home')} className="text-xs md:text-sm font-medium tracking-wide uppercase text-zinc-400 hover:text-white transition-colors text-left flex items-center gap-2">
-                                    Subir <ArrowUp className="w-3 h-3" />
-                                </button>
-                            </div>
-                        </div>
-                        
-                    </motion.div>
-
-                </div>
-
-                {/* Bottom Section: Giant Text */}
-                <motion.div variants={itemVariants} className="mt-32 w-full flex flex-col relative px-4 md:px-8 pb-4">
-                    
-                    <div className="flex flex-col items-center w-full pt-10 border-t border-zinc-800/50">
-                        {/* Huge Display Text */}
-                        <h1 
-                            className="text-[17vw] leading-[0.85] tracking-tighter text-white whitespace-nowrap overflow-hidden flex w-full justify-center md:justify-between items-center px-2"
-                        >
-                            <span className="font-semibold px-1 text-center w-full">Portfolio</span>
-                        </h1>
+                        <p className="text-xl md:text-3xl text-neutral-400 font-medium max-w-lg mb-16">
+                            Estou sempre aberto a novos desafios e parcerias criativas.
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <span className="text-blue-400 font-bold uppercase tracking-widest text-sm">Meus contatos</span>
+                        <a href="mailto:victor.h.navarro4@gmail.com" className="text-2xl md:text-4xl hover:text-blue-400 transition-all duration-300">victor.h.navarro4@gmail.com</a>
                     </div>
                 </motion.div>
-                
+
+                <motion.div variants={itemVariants} className="md:col-span-5 flex flex-col justify-end gap-12 pt-12 md:pt-0">
+                    <div className="grid grid-cols-2 gap-8">
+                        <div className="flex flex-col gap-4">
+                            <span className="text-neutral-500 font-bold uppercase tracking-widest text-[10px]">Social</span>
+                            <a href="https://www.linkedin.com/in/victorhugonavarrotaveira/" target="_blank" rel="noreferrer" className="text-lg hover:text-blue-400 transition-colors">LinkedIn</a>
+                            <a href="https://github.com/VNav4rr0" target="_blank" rel="noreferrer" className="text-lg hover:text-blue-400 transition-colors">GitHub</a>
+                            <a href="https://wa.me/5511919068515" target="_blank" rel="noreferrer" className="text-lg hover:text-blue-400 transition-colors">WhatsApp</a>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <span className="text-neutral-500 font-bold uppercase tracking-widest text-[10px]">Páginas</span>
+                            <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="text-lg hover:text-blue-400 transition-colors">Home</a>
+                            <a href="#about" onClick={(e) => scrollToSection(e, '#about')} className="text-lg hover:text-blue-400 transition-colors">Sobre</a>
+                            <a href="#projetos" onClick={(e) => scrollToSection(e, '#projetos')} className="text-lg hover:text-blue-400 transition-colors">Projetos</a>
+                        </div>
+                    </div>
+                    
+                    <div className="pt-12 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-neutral-500 text-sm">
+                        <p>© 2026 Victor Navarro. All rights reserved.</p>
+                        <div className="flex items-center gap-4">
+                            <span>Brasil</span>
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            <button 
+                                onClick={(e) => scrollToSection(e, '#home')}
+                                className="ml-4 flex items-center gap-2 hover:text-white transition-colors group"
+                            >
+                                Voltar ao topo <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                            </button>
+                        </div>
+                    </div>
+                </motion.div>
             </motion.div>
-        </div>
+        </footer>
     )
 }
 

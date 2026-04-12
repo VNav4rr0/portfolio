@@ -49,10 +49,10 @@ export function AboutCarousel() {
 
   return (
     // Card Container com transição suave de cor de fundo
-    <div className={`md:col-span-5 rounded-[32px] md:rounded-[48px] h-full p-8 md:p-14 flex flex-col justify-between min-h-[360px] md:min-h-[420px] transition-colors duration-1000 relative overflow-hidden ${slides[current].color}`}>
+    <div className={`rounded-[32px] md:rounded-[56px] h-full p-10 md:p-16 flex flex-col justify-between min-h-[360px] md:min-h-[420px] transition-colors duration-1000 relative overflow-hidden ${slides[current].color}`}>
       
       {/* Overlay de gradiente sutil para melhorar a legibilidade (UX) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-neutral-200/50 pointer-events-none" />
 
       {/* Conteúdo Animado com AnimatePresence (Motion) */}
       <AnimatePresence mode="wait">

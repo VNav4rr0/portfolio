@@ -38,23 +38,23 @@ export function HorizontalGallery({ scrollRef }: Props) {
   const x = useTransform(scrollYProgress, [0, 1], [0, -scrollWidth])
 
   return (
-    <div ref={containerRef} className="h-auto w-full overflow-hidden">
+    <div ref={containerRef} className="h-full w-full overflow-hidden flex items-center">
       <motion.div
         ref={trackRef}
         style={{ x }}
-        className="flex h-full items-center gap-[40px] px-14 md:px-24"
+        className="flex h-fit items-center gap-[24px] md:gap-[40px] px-6 md:px-24"
       >
         {galleryItems.map((item) => (
           <div
             key={item.id}
             className="
               relative
-              min-w-[400px] md:min-w-[500px]
-              h-[550px] md:h-[676px]
-              rounded-[4rem] md:rounded-[7rem]
-              bg-neutral-200
+              min-w-[85vw] md:min-w-[500px]
+              h-[400px] md:h-[600px]
+              rounded-[40px] md:rounded-[80px]
+              bg-neutral-100
               overflow-hidden
-              shadow-lg
+              shadow-xl
             "
           >
             <Image
