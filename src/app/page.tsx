@@ -66,11 +66,18 @@ export default function Home() {
         >
 
           {/* Coluna Esquerda: Título */}
+          {/* Coluna Esquerda: Título */}
           <div className="md:col-span-8 lg:col-span-8 flex flex-col items-start w-full">
-            <h1 className="w-full text-left text-[clamp(2.5rem,10vw,4rem)] sm:text-7xl md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-medium tracking-tight md:tracking-tighter leading-[1.05] md:leading-[0.9] text-neutral-900">
+            <motion.span 
+              variants={revealVariants}
+              className="text-blue-600 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-4 md:mb-6"
+            >
+              Desenvolvedor Full-Stack
+            </motion.span>
+            <h1 className="w-full text-left text-[clamp(2.8rem,12vw,4.5rem)] sm:text-7xl md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-medium tracking-tight md:tracking-tighter leading-[1] md:leading-[0.9] text-neutral-900">
               Transformando <br />
               complexo em <br />
-              <span className="relative flex flex-wrap items-center gap-3 md:gap-4 mt-2">
+              <span className="relative flex flex-wrap items-center gap-3 md:gap-4 mt-1 md:mt-2">
                 <span
                   style={{ color: current.color }}
                   className="transition-colors duration-700 ease-in-out"
@@ -86,16 +93,22 @@ export default function Home() {
           </div>
 
           {/* Coluna Direita: Descrição e Botão */}
-          <div className="md:col-span-4 lg:col-span-4 flex flex-col items-start justify-end gap-6 md:gap-10 w-full mb-0 md:mb-6 lg:mb-8 pt-4 md:pt-0">
-            <p className="text-lg sm:text-lg md:text-xl text-neutral-600 leading-relaxed font-medium w-full md:max-w-sm">
-              Olá, me chamo Victor. Sou desenvolvedor focado em construir interfaces modernas e funcionais.
+          <div className="md:col-span-4 lg:col-span-4 flex flex-col items-start justify-end gap-8 md:gap-10 w-full mb-0 md:mb-6 lg:mb-8 pt-8 md:pt-0">
+            <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-medium w-full md:max-w-sm opacity-90">
+              Olá, me chamo Victor. Sou desenvolvedor focado em construir interfaces de alta performance que unem design e funcionalidade.
             </p>
-            <a href="#projetos" className="w-full sm:w-fit group">
-              <RippleButton className="w-full sm:w-fit flex items-center justify-center gap-2 md:gap-3 !rounded-full bg-neutral-900 text-white border border-neutral-800 hover:bg-black px-6 py-4 md:px-[34px] md:py-[20px] text-base md:text-lg font-medium transition-all shadow-xl shadow-blue-900/10">
-                Ver projetos 
-                <span className="text-xl md:text-2xl leading-none transition-transform group-hover:translate-x-1 duration-300">→</span>
-              </RippleButton>
-            </a>
+            <div className="w-full sm:w-fit flex flex-col sm:flex-row gap-4">
+              <a href="#projetos" className="w-full sm:w-fit group" onClick={(e) => {
+                e.preventDefault();
+                const el = document.querySelector('#projetos');
+                el?.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                <RippleButton className="w-full sm:w-fit flex items-center justify-center gap-3 !rounded-full bg-neutral-900 text-white border border-neutral-800 hover:bg-black px-8 py-5 md:px-[34px] md:py-[20px] text-base md:text-lg font-bold transition-all shadow-2xl shadow-blue-900/10">
+                  Ver projetos 
+                  <span className="text-xl md:text-2xl leading-none transition-transform group-hover:translate-x-1 duration-300">→</span>
+                </RippleButton>
+              </a>
+            </div>
           </div>
         </motion.div>
 
