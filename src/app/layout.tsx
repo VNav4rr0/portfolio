@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: "Portfolio de Victor Navarro focado em desenvolvimento web e mobile.",
 }
 
-const MAINTENANCE_MODE = true
+const MAINTENANCE_MODE = false
 
 export default function RootLayout({
   children,
