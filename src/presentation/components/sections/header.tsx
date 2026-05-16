@@ -90,6 +90,11 @@ const Header = () => {
         return
       }
 
+      if (pathname !== '/') {
+        router.push(`/${href}`)
+        return
+      }
+
       const element = document.querySelector(href)
       if (element) {
         // Caso especial: Contato (fim da página)

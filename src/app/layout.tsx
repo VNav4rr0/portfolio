@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   description: "Portfolio de Victor Navarro focado em desenvolvimento web e mobile.",
 }
 
-// Alterar para false quando quiser desativar o modo de manutenção
 const MAINTENANCE_MODE = true
 
 export default function RootLayout({
